@@ -101,7 +101,7 @@ class MoneyManager extends Component {
       if (eachTransaction.type === transactionTypeOptions[0].displayText) {
         incomeAmount += eachTransaction.amount
       } else {
-        expensesAmount += eachTransaction.Amount
+        expensesAmount += eachTransaction.amount
       }
     })
     balanceAmount = incomeAmount - expensesAmount
@@ -172,11 +172,6 @@ class MoneyManager extends Component {
             <h1>History</h1>
             <div>
               <ul>
-                <li>
-                  <p>Title</p>
-                  <p>Amount</p>
-                  <p>Type</p>
-                </li>
                 {transactionsList.map(each => (
                   <TransactionItem
                     key={each.id}
